@@ -1,0 +1,29 @@
+<!--<div id="home">-->
+<!--  <label id="title1" >Solving system of linear equations</label>-->
+<!--  <div id="methods">-->
+<!--    <h4 id="title2">Choose a solving method :</h4>-->
+<!--    <li id="gauss" class="option" (click)="clickGauss()">Solve using Gauss Elimination</li>-->
+<!--    <li id="gaussJordan" class="option" (click)="clickGaussJordan()">Solve using Gauss-Jordan Elimination</li>-->
+<!--    <li id="LU" class="option" (click)="clickLU()">Solve using LU Decomposition</li>-->
+<!--    <li id="iterative" class="option" (click)="clickIterative()">Solve using Iterative Methods</li>-->
+<!--  </div>-->
+<!--</div>-->
+
+
+<div id="home">
+  <label id="title1" >Solving system of linear equations</label>
+  <div id="methods">
+    <h4 id="title2">Choose a solving method :</h4>
+    <li id="gauss" class="option" (click)="clickGauss()">Solve using Gauss Elimination</li>
+    <li id="gaussJordan" class="option" (click)="clickGaussJordan()">Solve using Gauss-Jordan Elimination</li>
+    <li id="LU" class="option" (click)="clickLU()">Solve using LU Decomposition</li>
+    <div id="chooseLU">
+      <ul *ngFor="let i of lUOptions;" id="options">
+        <li>
+          <label (click)="chooseLU(i)">{{i}} LU Decomposition</label>
+        </li>
+      </ul>
+    </div>
+    <li id="iterative" class="option" (click)="clickIterative()">Solve using Iterative Methods</li>
+  </div>
+</div>

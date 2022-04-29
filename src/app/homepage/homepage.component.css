@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+#home {
+  position: absolute;
+  border-top: 0px;
+  padding-top: 20px;
+  padding-bottom: 280px;
+  margin: auto;
+  color: black;
+  background-color: whitesmoke;
+  font-family: "Poppins";
+  position: relative;
+}
+
+#title1{
+  background-color: lightgrey;
+  border-color: grey;
+  border-style: solid;
+  border-radius: 0.3em;
+  position: relative;
+  left: 24%;
+  padding: 0.2em;
+  margin-bottom: 100px;
+  text-align: center;
+  font-size: 40px;
+}
+
+#title2 {
+  margin-bottom: 10px;
+  cursor: default;
+}
+#chooseLU{
+  display: none;
+  left:30%;
+  font-size: medium;
+  cursor: pointer;
+}
+#options:hover{
+  cursor: pointer;
+  margin-right: 0.65em;
+  margin-left: -0.75em;
+  background-color: #323330;
+  color: white;
+  transition: 0.3s ease-in-out
+}
+#methods {
+  margin-top: 20px;
+  border-radius: 0.9em;
+  border-color: black;
+  border-style: solid;
+  position: relative;
+  left: 24%;
+  font-size: 25px;
+  width: 650px;
+  list-style-type: circle;
+  padding-left: 2em;
+  padding-top: -8px;
+  padding-bottom: 10px;
+}
+
+.option:hover {
+  margin-right: 0.65em;
+  margin-left: -0.75em;
+  background-color: #323330;
+  color: white;
+  transition: 0.3s ease-in-out
+}
+#gauss, #gaussJordan, #LU, #jacobi, #gaussSiedel, #iterative{
+  cursor: pointer;
+}

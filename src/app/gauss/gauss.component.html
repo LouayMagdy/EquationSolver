@@ -1,0 +1,60 @@
+<div id="gaussMethod">
+  <label id="tit">Gauss Elimination</label>
+  <div id='main'>
+    <div>
+      <label  for="ns" [hidden]="hid">Number of equations  </label>
+      <input id="ns" type="number"  id="inputN" [hidden]="hid">
+    </div>
+    <div>
+
+    </div>
+    <input type="button" (click)='func()' id="input" class="en" value="enter" [hidden]="hid">
+    <div *ngIf='show'>
+
+      <div *ngFor="let message of arr; let i = index ">
+        <a>Equation number {{i+1}} </a><input type="text"  id="{{i}}" >
+
+      </div>
+      <button id="sol" (click)="fun()">Solve</button>
+      <label id="precisionI" for="inputPre">enter the precision</label>
+      <input type="number"  id="inputPre" class="pre">
+    </div>
+    <div id='lo' *ngIf='uniqe'>
+      <div *ngIf='nw'>
+
+        <div  >
+          <label  style="font-family: Beamer ; text-decoration: underline">Last Step</label>
+          <ul id="ul1" class="non" *ngFor="let fr of solve; let i = index">
+            <li id="li1"  *ngFor="let sec of fr; let j = index">
+              <label id="la"> {{sec}}</label>
+            </li>
+          </ul>
+        </div>
+        <!-- <div>
+             <a style="font-size: 50px;">Back Substtion time</a>
+
+             <a style="font-size: 50px;">{{BacsubtutionTime}}</a>
+     </div>
+         <div>
+             <a style="font-size: 50px;">Elimnation time =</a>
+             <a style="font-size: 50px;">{{ElimnationTime}}</a>
+         </div> -->
+      </div>
+      <tbody *ngIf='nw'>
+      <tr *ngFor="let fd of solution;let i=index">
+        <a> {{hash.keys[i]}} </a>
+        <a>=</a>
+        <a>{{fd}}</a>
+
+      </tr>
+      </tbody>
+    </div>
+    <div style="font-size: 50px;" *ngIf='inf'>
+      <a style="font-size: 50px;">Has infinite number of solution</a>
+    </div>
+    <div style="font-size: 50px;" *ngIf='noSolu'>
+      <a style="font-size:50px;">Has No solution</a>
+    </div>
+  </div>
+
+</div>

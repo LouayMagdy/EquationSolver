@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+#gaussJordanMethod {
+  display: none;
+}
+
+/*#ul1{*/
+/*  display: flex;*/
+/*  list-style-type: none;*/
+/*  font-size: 30px;*/
+/*}*/
+/*#li1{*/
+/*  display: inline-list-item;*/
+/*  width: 13em;*/
+/*  height: 2em;*/
+/*  font-size: 30px;*/
+/*}*/
+/*#lo{*/
+/*  border-radius: 0.9em;*/
+/*  margin-bottom: 20px;*/
+/*  background-color: whitesmoke;*/
+/*  padding-left: 0.9em;*/
+/*  padding-top: 0.9em;*/
+/*  width: 400px;*/
+/*  font-size: 30px;*/
+/*}*/
+
+div{
+  /* border-radius: 0.9em;
+  margin-bottom: 20px; */
+  background-color: whitesmoke;
+  padding-left: 0.9em;
+  /* padding-top: 0.9em;
+  width: 400px; */
+}
+#mainE{
+  width: 900px;
+  height:  900px;
+  font-family: Beamer;
+  padding: 0.5em;
+  position: absolute;
+  top: 6em;
+  left:30%;
+  margin-top: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  height: min-content;
+  border-style: solid;
+  border-color: black;
+  border-radius: 0.5em;
+}
+#titE{
+  font-family: Poppins;
+  background-color: lightgrey;
+  border-color: grey;
+  border-style: solid;
+  border-radius: 0.3em;
+  position: relative;
+  left: 30%;
+  padding: 0.2em;
+  margin-bottom: auto;
+  text-align: center;
+  font-size: 40px;
+}
+#solE,.enE{
+
+  width: 3.3em;
+  height: 2em;
+  background-color: lightgreen;
+  color: black;
+  border-style: none;
+  border-radius: 1em;
+  margin-right: 1em;
+  padding-left: 0.5em;
+  padding-top: 0.5em;
+  text-align: center;
+  font-family: Beamer;
+  font-style: italic;
+  font-size: large;
+  position: relative;
+  /* top: 1em; */
+  left: 45%;
+  cursor: pointer;
+}
+#precisionIE{
+  font-family: Beamer;
+  font-weight: bold;
+  width: 3em;
+  height: 2em;
+  margin-right: 1em;
+  text-align: center;
+  position: relative;
+  left: 73%;
+  top: -2em;
+}
+input{
+  width: 50%;
+  height: 40px;
+  background-color: lightgrey;
+  color: rgb(15, 13, 13);
+  border-style: bold;
+  border-radius: 0.3em;
+  margin-right: 1em;
+  text-align: center;
+  position: relative;
+  font-size: 30px;
+
+
+}
+.preE{
+  width: 3em;
+  height: 2em;
+  background-color: lightgrey;
+  color: rgb(15, 13, 13);
+  border-style: none;
+  border-radius: 0.3em;
+  margin-right: 1em;
+  text-align: center;
+  position: relative;
+  left: 60%;
+  top: -3em;
+}
+#solE,.enE:hover{
+  background-color: chartreuse;
+}
+label{
+  font-size: 20px;
+}
+a{
+  font-size: 20px;
+}
+
+#inputNE{
+  width: 50px;
+}

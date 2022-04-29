@@ -1,0 +1,46 @@
+<div id="iterative-methods">
+  <label id="header">Iterative Methods</label>
+  <div id="wall">
+    <div id="selectors">
+      <dl id="boundMethod">
+        <dt (click)="selectBoundMethod(true)">Number of iterations</dt>
+        <dt (click)="selectBoundMethod(false)">Tolerance value</dt>
+      </dl>
+      <div *ngIf="isIteration"> <input type="text" placeholder="Enter no of iterations" (keyup)="setNoIter($event)"></div>
+      <div *ngIf="!isIteration"> <input type="text" placeholder="Enter tolerance value" (keyup)="setTol($event)"></div>
+      <p>Precision </p>
+      <input type="text" placeholder="Enter precision" (keyup)="precisionSelector($event)">
+      <div id="a">
+        <input type="text" placeholder="Enter Number of equations" (keyup)="setNoEqn($event)">
+        <input id="subNo" type="button" value="Submit" (click)="submitNoEqn()">
+        <div id ="eqnBoxes">
+          <div>Enter initial guess :</div>
+          <div class="boxes" *ngFor="let i of nullar; let j = index">
+            <input id="box" type="text" value="{{i}}" (change)="setInitial($event,j)">
+          </div>
+
+        </div>
+        <div id="eqnId">
+          <div>Enter Equations :</div>
+          <div class="eq" *ngFor="let i of nullar; let j = index">
+            <input id="eqnInp" type="text" value="{{i}}" (change)="setEquation($event,j)">
+          </div>
+        </div>
+      </div>
+      <div id="sel">
+        <input type="button" class="methods" value="Solve by Gauss-Siedel" (click)="solveByGaussSiedel()">
+        <input type="button" class="methods" value="Solve by Jacobi-iterative" (click)="solveByJacobi()">
+      </div>
+    </div>
+
+    <div id="print">
+      <p> Solution: <br> </p>
+      <!--      <p> Initial [{{solnMatrix[0]}}]</p>-->
+      <ul *ngFor="let i of solnMatrix; let j=index">
+        <p *ngIf="j!=0"> Iteration {{j}}<br> [{{ solnMatrix[j] }}] </p>
+        <br>
+      </ul>
+    </div>
+  </div>
+
+</div>

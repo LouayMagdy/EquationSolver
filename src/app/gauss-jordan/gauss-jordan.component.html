@@ -1,0 +1,26 @@
+<div id="gaussJordanMethod">
+  <label id="titE">Gauss-Jordan Elimination</label>
+  <div id='mainE'>
+
+    <div>
+      <label for="nsE" [hidden] = "hideUI">Number of Equations </label>
+      <input id="nsE" type="number"  id="inputNE" [hidden] = "hideUI">
+    </div>
+
+    <input type="button" (click)='getParameters()' id="inputE" class="enE" value="Enter" [hidden]= "hideUI" >
+
+    <div *ngIf = 'content'>
+      <div *ngFor="let message of array; let i = index ">
+        <a>Equation No. {{i+1}} </a>    <input type="text"  id="{{i}}" >
+      </div>
+      <button id="solE" (click)="getEquations(); gjElimination(); solve();">Solve</button>
+      <label id="precisionIE" for="inputPreE">Set Precision</label>
+      <input type="number"  id="inputPreE" class="preE">
+    </div>
+
+    <div *ngFor = "let step of steps; let i = index">
+      <label  style="font-family: Beamer; text-decoration: none"> {{ step }} </label>
+      <p      *ngIf = "!((i+1)%5)"> <br> </p>
+    </div>
+  </div>
+</div>

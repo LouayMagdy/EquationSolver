@@ -1,0 +1,51 @@
+<div id="crout">
+  <div id="selectors">
+    <input type="text" placeholder="precision" id="precision" title="precision" (keyup)="precisionSelector($event)">
+    <input type="text" placeholder="Number of Equation" id="noEqn" title="no. of Equations" (keyup)="numberEqnSelector($event)">
+    <input type="button" value="Number Eqn" id="subNumber" title="submit number" (click)="getTextEqn()">
+    <input id="solveCrout" type="button" title="Solve" value="Solve" (click)="solve()">
+    <div id="move">
+      <div class="texts" *ngFor="let i of nullArr; let j=index">
+        <input id="eqn" placeholder="equation {{j+1}}" type="text" value="{{i}}" (keyup)="setEqn($event,j)">
+      </div>
+    </div>
+  </div>
+  <div id="main">
+    <p id="title"> LU Crout Decomposition A=LU </p>
+    <div id="u">
+      <p> Upper Matrix of Crout Decomposition: </p>
+      <ul id="Uul" *ngFor="let i of u; let j=index">
+        <li id="Uli" *ngFor="let k of u[j]; let t=index"> <p> {{u[j][t]}} </p> </li>
+        <br>
+      </ul>
+    </div>
+
+    <div id="l">
+      <p> lower matrix of crout decomposition: </p>
+      <ul id="Lul" *ngFor="let i of l; let j=index">
+        <li id="Lli" *ngFor="let k of l[j]; let t=index"> <p> {{l[j][t]}} </p> </li>
+        <br>
+      </ul>
+    </div>
+
+    <div id="soln">
+      <p > free terms </p>
+      <ul *ngFor="let i of soln; let j = index">
+        <p> {{soln[j]}} </p>
+      </ul> <br>
+    </div>
+
+    <div id="y">
+      <p> Solving Equation: <br> AX=B  && A=LU <br> AX=LUX <br> Let Y = UX <br> LY=B <br> </p> <p id = "msgY"> {{msgY}} <br> </p>
+      <ul *ngFor="let i of y; let j = index"> <p> {{y[j]}} </p> </ul> <br>
+    </div>
+
+    <div id="x">
+      <p> Y=UX <br> </p> <p id ="msgX">{{msgX}} <br> </p>
+      <ul *ngFor="let i of x; let j = index">
+        <p> {{x[j]}} </p>
+      </ul> <br>
+    </div>
+    <br>
+  </div>
+</div>

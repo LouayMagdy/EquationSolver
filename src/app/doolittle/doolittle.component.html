@@ -1,0 +1,89 @@
+<div id="doolittle">
+  <label id="title">Doolittle Decomposition</label>
+  <!--<div id="coef">
+    <ul id="rows" *ngFor="let i of coefficients; let k = index;">
+      <li id="row" *ngFor="let j of coefficients[k]; let l = index;">
+        <label *ngIf="l!=0" id="plusSign">+</label>
+        <input id="slot" type="text" value={{coefficients[k][l]}} (change)="setSlot(k, l , $event.target)">
+        <label for="slot" id="label">x<sub>{{l + 1}}</sub></label>
+      </li>
+      <label id="equalSign"> = </label>
+      <input id="freeTerm" type="text" value="0" (change)="setSlot(k, eqnNo , $event.target);">
+    </ul>
+  </div>-->
+  <div id="eqn">
+    <h4 style="font-family: Poppins">About the System</h4>
+    <label id="NOeqn" for="inputEqnNo">enter the number of equations:</label>
+    <input id="inputEqnNo" type="text" (change)="setEqnNo($event)">
+    <button id="continue" (click)="continue()">Continue</button>
+    <ul id="eqnSlot">
+      <li *ngFor="let i of nullarr; let k = index">
+        <label id="eqnLabel">equation {{k + 1}} </label>
+        <input id="eqni" type="text" value="{{i}}" (change)="addEqn($event, k)">
+      </li>
+    </ul>
+    <label id="precisionId" for="precision">enter the precision</label>
+    <input id="precision" type="text" value="7" (change)="setPrecision($event)">
+    <button id="solve" (click)="solve();">Solve</button>
+  </div>
+  <!--  <label *ngIf="err!=''">Something went wrong... perhaps you have no solution or infinite solutions-->
+  <!--    or you have specified improperly</label>-->
+  <div id="steps" >
+    <h3 style="font-family: Beamer; text-decoration: underline">The LU Decomposition: A = L . U</h3>
+    <div id="system">
+      <label style="font-family: Beamer ; text-decoration: underline">The System</label>
+      <ul *ngFor="let i of eqns">
+        <label>{{i}}</label>
+      </ul>
+    </div>
+    <div id="lower">
+      <label id="L" style="font-family: Beamer ; text-decoration: underline">L Matrix</label>
+      <ul id="rowsL" *ngFor="let i of matrixLU; let k = index;">
+        <li id="rowL" *ngFor="let j of matrixLU[k]; let l = index">
+          <label *ngIf="l < k" id="termL">{{matrixLU[k][l]}}</label>
+          <label *ngIf="l == k" id="termLD">1</label>
+        </li>
+      </ul>
+    </div>
+    <div id="upper">
+      <label id="U" style="font-family: Beamer ; text-decoration: underline">U Matrix</label>
+      <ul id="rowsU" *ngFor="let i of matrixLU; let k = index;">
+        <li id="rowU" *ngFor="let j of matrixLU[k]; let l = index">
+          <label *ngIf="l >= k" id="termU">{{matrixLU[k][l]}}</label>
+        </li>
+      </ul>
+    </div>
+    <div id="freed">
+      <label id="F" style="font-family: Beamer ; text-decoration: underline">Free Term</label>
+      <ul id="freeTermStep" *ngFor="let i of stepFreeTerm; let j = index">
+        <li>
+          <label id="free">{{stepFreeTerm[j]}}</label>
+        </li>
+      </ul>
+    </div>
+    <div id="solving">
+      <label id="s" style="font-family: Beamer ; text-decoration: underline">Solving the Equation</label>
+      <h3 style="font-family: Beamer"> L . U . X = A . X = b</h3>
+      <h3 style="font-family: Beamer"> let U . X = Y</h3>
+      <h3 style="font-family: Beamer ; text-decoration: underline">By Forward Substitution </h3>
+      <div >
+        <ul id = "matrix" *ngFor="let i of YFreeTerm; let x = index;">
+          <li>
+            <label id="Y">y<sub>{{x+1}}</sub> = {{YFreeTerm[x]}}</label>
+          </li>
+        </ul>
+      </div>
+      <h3 style="font-family: Beamer ; text-decoration: underline">By Backward Substitution </h3>
+      <div>
+        <ul id = "matrix'"  *ngFor="let i of soln; let x = index">
+          <li>
+            <label id="x">{{vars[x]}} = {{soln[x]}}</label>
+          </li>
+        </ul>
+      </div>
+      <!--      <label *ngIf="err!=''">Something went wrong... perhaps you have no solution or infinite solutions-->
+      <!--        or you have specified improperly</label>-->
+    </div>
+
+  </div>
+</div>

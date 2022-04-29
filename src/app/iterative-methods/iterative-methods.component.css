@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+#iterative-methods{
+  display: none;
+}
+
+#header{
+  font-family: Poppins;
+  background-color: lightgrey;
+  border-color: grey;
+  border-style: solid;
+  border-radius: 0.3em;
+  position: absolute;
+  left: 24%;
+  padding: 0.2em;
+  margin-bottom: auto;
+  text-align: center;
+  font-size: 40px;
+}
+
+#wall {
+  width: 750px;
+  font-family: Beamer;
+  font-size: large;
+  padding: 0.5em;
+  top: 6em;
+  left: -18%;
+  margin-top: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  height: min-content;
+  border-style: solid;
+  border-color: black;
+  border-radius: 0.5em;
+  position: absolute;
+  margin-left: 500px;
+}
+
+a{
+  position: absolute;
+  left: 200px;
+}
+#subNo{
+  position: absolute;
+  left: 180px;
+}
+.methods{
+  background-color: darkseagreen;
+}
+#boundMethod{
+  cursor: pointer;
+}
+#eqnBoxes{
+  display: none;
+  list-style: none;
+}
+#eqnId{
+  visibility: hidden;
+}
+
+/*#subNo, .methods{*/
+/*  width: 11em;*/
+/*  height: 2em;*/
+/*  background-color: lightgreen;*/
+/*  color: black;*/
+/*  border-style: none;*/
+/*  border-radius: 1em;*/
+/*  margin-right: 1em;*/
+/*  text-align: center;*/
+/*  font-family: Beamer;*/
+/*  font-style: italic;*/
+/*  font-size: large;*/
+/*  cursor: pointer;*/
+/*  left: 30%;*/
+/*  margin-right: 40px;*/
+/*  position: absolute;*/
+/*}*/
+
+/*#subNo {*/
+/*  margin-left: 20px;*/
+/*}*/
+
+
+
+

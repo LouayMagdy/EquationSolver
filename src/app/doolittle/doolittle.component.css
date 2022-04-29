@@ -1,0 +1,224 @@
+#doolittle{
+  display: none;
+}
+#title{
+  font-family: Poppins;
+  background-color: lightgrey;
+  border-color: grey;
+  border-style: solid;
+  border-radius: 0.3em;
+  position: relative;
+  left: 24%;
+  padding: 0.2em;
+  margin-bottom: auto;
+  text-align: center;
+  font-size: 40px;
+}
+#eqn{
+  width: 550px;
+  font-family: Beamer;
+  padding: 0.5em;
+  position: relative;
+  top: 6em;
+  left: -18%;
+  margin-top: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  height: min-content;
+  border-style: solid;
+  border-color: black;
+  border-radius: 0.5em;
+}
+#steps{
+  width: fit-content;
+  border-style: solid;
+  border-color: black;
+  display: none;
+  font-family: Beamer;
+  font-size: medium;
+  font-weight: bolder;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 0.9em;
+  position: relative;
+  margin-top: auto;
+  margin-left: auto;
+  top: 6em;
+  left: -37%;
+}
+
+#NOeqn{
+  font-family: Beamer;
+  font-weight: bold;
+  float: top;
+  width: 7em;
+  height: 2em;
+  margin-right: 1em;
+  margin-bottom: auto;
+  text-align: center;
+  top: 10%;
+  left: 25%;
+  -webkit-transform: translate(-50%, -10%);
+  transform: translate(-30%, 0%);
+}
+#inputEqnNo{
+  text-align: center;
+  width: 3em;
+  background-color: lightgrey;
+  border-style: none;
+  border-radius: 0.3em;
+  height: 2em;
+}
+#continue{
+  width: 5em;
+  height: 2em;
+  background-color: lightgreen;
+  color: black;
+  border-style: none;
+  border-radius: 1em;
+  margin-right: 1em;
+  text-align: center;
+  font-family: Beamer;
+  font-style: italic;
+  font-size: large;
+  position: relative;
+  cursor: pointer;
+  left: 30%;
+}
+#eqnSlot{
+  display: none;
+  position: relative;
+  list-style-type: none;
+  left: 0;
+  height: fit-content;
+}
+#eqnLabel{
+  font-family: Beamer;
+  font-weight: bold;
+}
+#eqni{
+  height: 3em;
+  margin: 1em;
+  border-radius: 0.2em;
+  border-style: none;
+  background-color: lightgrey;
+}
+#precisionId{
+  display: none;
+  font-family: Beamer;
+  font-weight: bold;
+  width: 7em;
+  height: 2em;
+  margin-right: 1em;
+  text-align: center;
+  position: relative;
+  left: 20em;
+  top : -8em;
+}
+#precision{
+  display: none;
+  width: 3em;
+  height: 2em;
+  background-color: lightgrey;
+  color: darkgrey;
+  border-style: none;
+  border-radius: 0.3em;
+  margin-right: 1em;
+  text-align: center;
+  position: relative;
+  left: 80%;
+  top: -12em;
+}
+
+#solve{
+  display: none;
+  width: 3.3em;
+  height: 2em;
+  background-color: lightgreen;
+  color: black;
+  border-style: none;
+  border-radius: 1em;
+  margin-right: 1em;
+  padding-left: 0.5em;
+  padding-top: 0.5em;
+  text-align: center;
+  font-family: Beamer;
+  font-style: italic;
+  font-size: large;
+  position: relative;
+  top: -2em;
+  left: 45%;
+  cursor: pointer;
+}
+#system{
+  font-family: Beamer;
+  padding-bottom: 0.9em;
+}
+#rowL{
+  display: inline-list-item;
+  width: 13em;
+  height: 2em;
+}
+#rowsL{
+  display: flex;
+  list-style-type: none;
+}
+#rowU{
+  display: inline-list-item;
+  width: 13em;
+  height: 2em;
+}
+#rowsU{
+  display: flex;
+  list-style-type: none;
+}
+
+#lower, #upper, #system{
+  border-radius: 0.9em;
+  margin-bottom: 20px;
+  background-color: whitesmoke;
+  padding-left: 0.9em;
+  padding-top: 0.9em;
+  width: 400px;
+}
+#freed{
+  padding-left: 0.9em;
+  padding-top: 0.9em;
+  position: relative;
+  border-radius: 0.9em;
+  margin-bottom: 20px;
+  left: 100px;
+  background-color: whitesmoke;
+  width: 200px;
+  list-style-type: none;
+}
+#freeTermStep{
+  text-align: justify-all;
+  list-style-type: none;
+  width: 13em;
+  height: 2em;
+  font-family: Beamer;
+}
+#solving{
+  padding-left: 0.9em;
+  padding-right: 0.9em;
+  padding-top: 0.9em;
+  padding-bottom: 0.9em;
+  position: relative;
+  border-radius: 0.9em;
+  margin-bottom: 20px;
+  left: 100px;
+  background-color: whitesmoke;
+  width: 200px;
+  list-style-type: none;
+}
+#matrix, #matrix\'{
+  text-align: justify-all;
+  list-style-type: none;
+  width: 13em;
+  height: 2em;
+  font-family: Beamer;
+}
+#x, #Y{
+  font-style: italic;
+}

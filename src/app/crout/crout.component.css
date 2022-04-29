@@ -1,0 +1,96 @@
+#crout {
+  display: none;
+}
+
+
+#main{
+  width:40%;
+  border: solid;
+  margin-left: 35%;
+  visibility: hidden;
+}
+
+#title{
+  border-radius: 10px;
+  margin-left: 5%;
+  width:75%;
+  background-color: grey;
+  border-style: solid;
+}
+p{
+  padding-left: 20px;
+  font-size:20px;
+  font-weight:bold;
+}
+#u{
+  border-radius: 10px;
+  margin-left: 5%;
+  width:80%;
+  background-color: grey;
+}
+#l{
+  border-radius: 10px;
+  margin-left: 5%;
+  width:80%;
+  background-color: grey;
+}
+#y{
+  border-radius: 10px;
+  margin-left: 5%;
+  width:80%;
+  background-color: grey;
+}
+#x{
+  border-radius: 10px;
+  margin-left: 5%;
+  width:80%;
+  background-color: grey;
+}
+ul{
+  list-style: none;
+  display: flex;
+}
+#soln{
+  border-radius: 10px;
+  margin-left: 5%;
+  width:80%;
+  background-color: grey;
+}
+#move{
+  position: absolute;
+  top: 71px;
+}
+input[type="button"]{
+  cursor: pointer;
+}
+
+#solveCrout{
+  position: absolute;
+  top:50px;
+  left:350px;
+  width:75px;
+  height:20px;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: green;
+}
+
+#msgX{
+  font-weight: bold;
+}
+
+#msgY{
+  font-weight: bold;
+}
+
+#noEqn{
+  position: absolute;
+  top:50px;
+  left:6px;
+}
+
+#subNumber{
+  position: absolute;
+  top:50px;
+  left:180px;
+}
